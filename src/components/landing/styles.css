@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700&display=swap');
 
-
+button{
+    cursor: pointer;
+}
 
 *{
     margin: 0;
@@ -13,11 +15,21 @@
     background-image: url(../../../img/background.png);
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     color: #424242;
+    min-height: 100vh;
   
     
 }
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 .row{
     
@@ -33,10 +45,12 @@
     display: flex;
     width: 55%;
     margin-right: 60px;
+
 }
 
 .card{
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.185));
+    overflow-y: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.096));
     background: #fff;
     padding: 40px 30px;
     border-radius: 10px;
@@ -46,8 +60,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: space-around;
+    height: 400px;
     text-align: center;
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 .img-card{

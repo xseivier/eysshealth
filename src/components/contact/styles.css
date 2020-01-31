@@ -6,24 +6,31 @@
     -ms-flex-line-pack: center;
     align-content: center;
     -ms-flex-align: center;
-    height: 70vh;
     align-items: center;
 
 }
 
-.c{
-    height: 75vh;
-    color: #424242;
-    min-width: 300px;
-    max-width: 600px;
+
+
+.c-contact{
+    background: #fff;
     border-radius: 5px;
-    /* margin: 30px; */
-    padding: 60px 60px;
-   
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.096));
+    padding: 40px 60px;
+    min-width: 330px;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+
 }
 
 .title-contact{
     color: #4885ed;
+    font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 15px;
 }
@@ -31,6 +38,7 @@
 form{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 form input, textarea {
@@ -38,9 +46,10 @@ form input, textarea {
     padding: 8px;
     border: 1.5px solid #ececec;
     min-width: 250px;
-    max-width: 400px;
+    max-width: 450px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-top: 15px;
 }
 
 form input::placeholder, textarea::placeholder{
@@ -49,7 +58,7 @@ form input::placeholder, textarea::placeholder{
 
 form button{
     width: 100px;
-    margin: 10px auto;
+    margin: 15px auto;
     border: none;
     height: 35px;
     width: 110px;
@@ -58,9 +67,15 @@ form button{
     background: none;
     color: #4885ed;
 }
+
 form button:hover{
     background: #4885ed;
     color: #fff;
+}
+
+form label{
+    color: red;
+    font-size: 13px;
 }
 
 .i-tex{
@@ -73,8 +88,9 @@ form button:hover{
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: auto;
+    margin: 20px auto;
     height: 25px;
+
 }
 
 

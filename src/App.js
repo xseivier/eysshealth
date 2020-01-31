@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+
 
 import {
   BrowserRouter as Router,
@@ -12,26 +13,46 @@ import Contact from './components/contact'
 
 const App = () => {
 
-  const [typesCards, settypesCards] = useState([
-    {
-      name: 'Medical Consultation',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, consequatur? Laboriosam consectetur delectus soluta quaerat nam placeat.',
-      action:(
-        <button></button>
-      )
+  const [typesCards, settypesCards] = useState('')
+  const [datos, setdatos] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+    type: '' 
+  })
+
+  useEffect(() => {
+    setdatos({...datos, type: typesCards})
+  }, [typesCards])
+
+  function handleChange(event, values, setdatos) {
+    / The handle change function works with 3 variables, firts: with the event, wich what i use to obtain de name of the input and his value, second: the actual values of the state, and third: the function wich set the state perse /
+    
+    setdatos({ ...values, [event.target.name]: event.target.value })
     }
-  ])
+
 
   return (
+    
       <Router>
+      
         <Switch>
-        <Route exact path="/" component={Landing}/>
-       
-          <Route path="/contact" component={Contact}/>
+        
+        <Route exact path="/" component={Landing} >
+          <Landing  typesCards={typesCards} settypesCards={settypesCards} />  
+        </Route> :
+
+        
+          <Route path="/contact" component={Contact}>
+            <Contact typesCards={typesCards} datos={datos} setdatos={setdatos} settypesCards={settypesCards} />
+            </Route> 
           
       
         </Switch>
+        
       </Router>
+      
   );
 };
 
