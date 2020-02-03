@@ -39,14 +39,21 @@ const App = () => {
       
         <Switch>
         
-        <Route exact path="/" component={Landing} >
+        <Route exact path="/" >
           <Landing  typesCards={typesCards} settypesCards={settypesCards} />  
-        </Route> :
+        </Route> 
+
+
 
         
           <Route path="/contact" component={Contact}>
             <Contact typesCards={typesCards} datos={datos} setdatos={setdatos} settypesCards={settypesCards} />
             </Route> 
+
+
+            <Route >
+          <Landing  typesCards={typesCards} settypesCards={settypesCards} />  
+        </Route>     
           
       
         </Switch>

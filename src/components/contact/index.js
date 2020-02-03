@@ -56,7 +56,7 @@ const index = (props) => {
            
         
         Axios
-        .post('http://192.168.1.61:3000/enviar/', props.datos, props.typesCards)
+        .post('/enviar', props.datos, props.typesCards)
         .then(response => {
           if(response.data.ok){
             Swal.fire(
