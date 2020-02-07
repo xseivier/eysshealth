@@ -1,141 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700&display=swap');
-
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    background-image: url(../../../img/background.png);
-    background-size: cover;
-    background-attachment: fixed;
-    color: #424242;
-    min-height: 100vh;
-  
-    
+.container {
+  background-image: url(../../../img/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #424242;
+  min-height: 100vh;
 }
 
-input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
+.row {
+  margin: 0 auto;
+  max-width: 1280;
 
-.row{
-    
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  display: flex;
 }
 
-.cards{
-    display: flex;
-    width: 55%;
-    margin-right: 60px;
-
+.cards {
+  display: flex;
+  justify-content: space-between;
 }
 
-.card{
-    overflow-y: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.096));
-    background: #fff;
-    padding: 40px 30px;
-    border-radius: 10px;
-    min-width: 230px;
-    width:30%;
-    display: flex;
+.card {
+  /* overflow-y: auto; */
+  flex-basis: calc(33.3% -10px);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.096));
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  min-height: 400px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.img-card {
+  margin-bottom: 30px;
+}
+
+.title-card {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.text-card {
+  /* line-height: 1px; */
+  font-size: 14px;
+  margin-bottom: 25px;
+  min-height: 170px;
+}
+
+.btn-card {
+  border: none;
+  height: 35px;
+  width: 110px;
+  border-radius: 100px;
+  border: 2px solid #4885ed;
+  background: none;
+  color: #4885ed;
+}
+
+.btn-card:hover {
+  background: #4885ed;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 100%;
+    padding-top: 80px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .row {
+    height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
-    height: 400px;
-    text-align: center;
-    margin: 0 20px;
-}
+  }
 
-.img-card{
-    margin-bottom: 30px;
-}
+  .cards {
+    margin-right: 0;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
 
-.title-card{
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
+  .card {
+    margin-bottom: 40px !important;
+    width: 100%;
+    margin: auto;
+  }
 
-.text-card{
-    line-height: 15px;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-.btn-card{
-    border: none;
-    height: 35px;
-    width: 110px;
-    border-radius: 100px;
-    border: 2px solid #4885ed;
-    background: none;
-    color: #4885ed;
-    
-}
-
-.btn-card:hover{
-    background: #4885ed;
-    color: #fff;
-}
-
-.landing-img{
-    
-}
-
-@media (max-width: 720px){
-
-    .container{
-        height: 100%;
-        padding-top: 80px;
-    }
-
-    .navbar{
-        display: none;
-    }
-
-    .row{
-        height: 100%;
-        flex-direction: column;
-    }
-
-    .cards{
-        margin-right: 0;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-    }
-
-    .card{
-        margin-bottom: 40px !important;
-        width: 100%;
-        margin: auto;
-    }
-
-    .landing-img{
-        display: none;
-    }
-
-    
-
-   
+  .landing-img {
+    display: none;
+  }
 }
